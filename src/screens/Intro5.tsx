@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
   StyleSheet,
   Image,
-  Alert
+  Alert,
 } from 'react-native';
 
 const Intro5: React.FC = () => {

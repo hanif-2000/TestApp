@@ -1,6 +1,6 @@
 import React from 'react';
 import OnboardingLayout from '../common/OnboardingLayout';
-import {Image, StyleSheet, View} from 'react-native';
+import {View} from 'react-native';
 
 const Intro1: React.FC = ({navigation}: any) => {
   return (

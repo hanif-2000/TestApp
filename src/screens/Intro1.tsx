@@ -1,11 +1,10 @@
 import React from 'react';
 import OnboardingLayout from '../common/OnboardingLayout';
-import {Image, StyleSheet, View} from 'react-native';
+import {View} from 'react-native';
 
 const Intro1: React.FC = ({navigation}: any) => {
   return (
-    <View style={{flex: 1,}}>
-      
+    <View style={{flex: 1}}>
       <OnboardingLayout
         title="Welcome to Ivy Wolf"
         subtitle="A wearable that lives and breathes"
@@ -19,5 +18,3 @@ const Intro1: React.FC = ({navigation}: any) => {
 };
 
 export default Intro1;
-
-
