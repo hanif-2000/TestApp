@@ -12,8 +12,8 @@ const ProgressIndicator: React.FC<ProgressIndicatorProps> = ({ currentStep, tota
 
 const styles = StyleSheet.create({
   text: {
-    fontSize: 14,
-    color: '#666',
+    fontSize: 16,
+    color: '#646464',
     marginBottom: 16,
     textAlign: 'center',
   },

@@ -10,7 +10,7 @@ interface OnboardingLayoutProps {
   currentStep: number;
   totalSteps: number;
   onNext: () => void;
-  onBack?: () => void; // Optional for screens without a back button
+  onBack?: () => void;
 }
 
 const OnboardingLayout: React.FC<OnboardingLayoutProps> = ({
@@ -56,26 +56,26 @@ const styles = StyleSheet.create({
     backgroundColor: '#F8F8F8',
   },
   title: {
-    fontSize: 24,
+    fontSize: 30,
     fontWeight: 'bold',
     color: '#000',
     marginBottom: 16,
   },
   subtitle: {
-    fontSize: 16,
-    color: '#666',
+    fontSize: 18,
+    color: '#646464',
     textAlign: 'center',
     marginBottom: 16,
+    fontWeight: '500',
+    width: '80%',
   },
   image: {
-    width: '90%',
-    height: 200,
+    width: 280,
+    height: 280,
     borderRadius: 8,
     marginBottom: 16,
   },
   buttonContainer: {
-    // flexDirection: 'row',
-    // justifyContent: 'space-between',
     width: '100%',
   },
 

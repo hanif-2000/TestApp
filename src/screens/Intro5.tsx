@@ -1,4 +1,3 @@
-import CheckBox from '@react-native-community/checkbox';
 import React, {useState} from 'react';
 import {
   View,
@@ -9,6 +8,7 @@ import {
   Image,
   Alert,
 } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 const Intro5: React.FC = () => {
   const [name, setName] = useState('');
@@ -26,12 +26,10 @@ const Intro5: React.FC = () => {
     <View style={styles.container}>
       <Text style={styles.title}>Ivy Wolf</Text>
       <View style={styles.logoContainer}>
-        <View style={{}}>
-          <Image
-            source={require('./../assest/Wolf_logo.png')}
-            style={styles.logo}
-          />
-        </View>
+        <Image
+          source={require('./../assest/Wolf_logo.png')}
+          style={styles.logo}
+        />
       </View>
       <Text style={styles.subtitle}>Let's name your IVY WOLF</Text>
       <Text style={styles.description}>You can always change this later.</Text>
@@ -44,11 +42,17 @@ const Intro5: React.FC = () => {
       />
 
       <View style={styles.checkboxContainer}>
-        <CheckBox
-          value={isChecked}
-          boxType="square"
-          onValueChange={setIsChecked}
-        />
+        <TouchableOpacity
+          style={[
+            styles.checkbox,
+            // {backgroundColor: isChecked ? '#000' : '#FFF'},
+          ]}
+          onPress={() => setIsChecked(!isChecked)}>
+          {
+            isChecked && <Icon name="check" size={25} color="#000" />
+            // <View style={styles.checkboxInner} />
+          }
+        </TouchableOpacity>
         <Text style={styles.checkboxText}>
           I agree to Ivy Wolf's Privacy Policy and T&Cs
         </Text>
@@ -80,9 +84,6 @@ const styles = StyleSheet.create({
   logo: {
     width: 50,
     height: 50,
-  },
-  logoText: {
-    fontSize: 40,
   },
   title: {
     fontSize: 28,
@@ -118,8 +119,22 @@ const styles = StyleSheet.create({
     marginBottom: 24,
     width: '100%',
   },
+  checkbox: {
+    width: 30,
+    height: 30,
+    borderWidth: 1,
+    borderColor: '#000',
+    borderRadius: 4,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginRight: 8,
+  },
+  checkboxInner: {
+    width: 12,
+    height: 12,
+    backgroundColor: '#FFF',
+  },
   checkboxText: {
-    marginLeft: 8,
     fontSize: 16,
     color: '#333',
   },

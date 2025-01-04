@@ -4,7 +4,7 @@ import {View} from 'react-native';
 
 const Intro1: React.FC = ({navigation}: any) => {
   return (
-    <View style={{flex: 1}}>
+    <View style={{flex: 1,backgroundColor:'red'}}>
       <OnboardingLayout
         title="Welcome to Ivy Wolf"
         subtitle="A wearable that lives and breathes"
